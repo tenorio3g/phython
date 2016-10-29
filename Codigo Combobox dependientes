@@ -1,0 +1,86 @@
+
+
+Private Sub ComboBox1_Change()
+On Error Resume Next
+'Fuera flases de pantalla
+
+Application.ScreenUpdating = False
+
+'limpia el combo
+ComboBox2.Clear
+
+
+'carga lista de combo1 en combo2
+lista_corresp = ComboBox1.List(ComboBox1.ListIndex)
+'selecciona la hoja (Estado) elegida
+
+Sheets(lista_corresp).Select
+
+'Posiciona en 1° celda de los encabezados
+Range("D4").Select
+
+'Añade los items de la columna al combo2
+Do While Not IsEmpty(ActiveCell)
+ComboBox2.AddItem ActiveCell
+ActiveCell.Offset(0, 1).Select
+Loop
+End Sub
+
+
+
+Private Sub ComboBox1_Enter()
+On Error Resume Next
+
+'Apagamos los parpadeos de pantalla
+Application.ScreenUpdating = False
+
+'limpia el combobox
+ComboBox1.Clear
+
+'carga lista de hojas
+For h = 3 To Sheets.Count
+  ComboBox1.AddItem Sheets(h).Name
+Next h
+End Sub
+
+Private Sub ComboBox2_Change()
+
+'Fuera flases de pantalla
+
+Application.ScreenUpdating = False
+
+'limpia el combo
+ComboBox3.Clear
+
+'carga lista de combo2 a una variable para...
+Celda = ComboBox2.List(ComboBox2.ListIndex)
+
+'Buscar el Estado elegido de los encabezados
+'de la tabla de las ciudades y posicionarse
+Cells.Find(What:=Celda, LookAt:=xlWhole).Select
+
+'añade todos los items (ciudades)
+'a la lista del combo3
+ActiveCell.Offset(1, 0).Select
+Do While Not IsEmpty(ActiveCell)
+   ComboBox3.AddItem ActiveCell
+ActiveCell.Offset(1, 0).Select
+Loop
+End Sub
+
+
+
+Private Sub Reset_Click()
+'borra contenido de celda activa
+Range("A3").ClearContents
+Unload Me
+FormCombos.Show
+
+End Sub
+
+
+
+
+Private Sub UserForm_Terminate()
+Sheets("Datos a elegir").Select
+End Sub
