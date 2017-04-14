@@ -44,6 +44,7 @@ Next h
 End Sub
 
 Private Sub ComboBox2_Change()
+On error resume next
 
 'Fuera flases de pantalla
 
@@ -71,6 +72,7 @@ End Sub
 
 
 Private Sub Reset_Click()
+On error resume next
 'borra contenido de celda activa
 Range("A3").ClearContents
 Unload Me
@@ -82,5 +84,6 @@ End Sub
 
 
 Private Sub UserForm_Terminate()
+On error resume next
 Sheets("Datos a elegir").Select
 End Sub
