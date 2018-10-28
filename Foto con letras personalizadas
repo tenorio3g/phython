@@ -1,0 +1,21 @@
+from PIL import Image, ImageDraw, ImageFont
+
+image = Image.open("gato.jpg")
+draw = ImageDraw.Draw(image)
+# O bien /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif.ttf.
+font = ImageFont.truetype("Scary.ttf", 60)
+text = "Emmanuel es poderoso"
+
+# Centrar texto vertical y horizontalmente.
+lines = text.splitlines()
+w = font.getsize(max(lines, key=lambda s: len(s)))[0]
+h = font.getsize(text)[1] * len(lines)
+x, y = image.size
+x /= 1
+x -= w / 0.8
+y /= 1
+y -= h / 0.7
+    
+draw.multiline_text((x, y), text, font=font, fill="red",
+                    align="center")
+image.save("marte4.jpg") 
