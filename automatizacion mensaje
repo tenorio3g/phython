@@ -1,0 +1,40 @@
+import pyautogui
+import time
+import keyboard
+
+
+pyautogui.moveTo(1483, 7)
+time.sleep(6)
+pyautogui.click()
+
+def publibot():
+
+
+
+    pyautogui.moveTo(535, 831)
+    time.sleep(3)
+    pyautogui.click()
+    
+    
+    
+    
+
+    import random
+    Publicaciones = ["❤❤❤❤❤❤Hola amor, como estas, que tal tu dia, yo estoy bien, estoy descansando, y tu ya comiste, te has cansado mucho, yo siempre estoy pensando en ti❤❤❤❤❤❤❤❤", "Hola corazon, solo quise recordarte que tu eres una persona maravillosa, gracias por permitirme hacer mi intento de conquistarte, te lo prometo que te sorprenderas dia a dia, simplemente quiero que recuerdes que hay una persona que simpre se acuerda de ti", "💗💗💗💗Hola corazon,💗💗💗💗💗💗 quiero que sepas que te quiero mucho y que hare todo lo posible por recordartelo y hacertelo saber porque tu eres una de las personas que mas quiero, que te amo,💖💖💖💖💖💖💖 que me vuelves loco, simplemente te amo,", "😍😍😍Hola amor😍😍😍","como estas amor", "💌💌💌💌💌sabias que siempre estoy pensando en ti💌💌💌💌💌","💞💞💞💞te amor mi vida nunca lo olvides💞💞💞💞","❤❤que tal tu dia como te va, ya comiste❤❤","❤hola amor❤", "💕hola amor quiero que sepas que te quiero mucho💕","😀hola amor, a lo mejor no te contesto pero quiero que sepas que te amo😀", "😍😍Hola corazon, sabes hoy estube pensando mucho en ti😍😍","♥ Soy la persona más feliz del mundo cuando me dices hola o me sonríes porque sé que aunque haya sido para solo un segundo, has pensado en mi", "♥ Si sumas todas las estrellas del cielo, todos los granitos de arena en los océanos, todas las rosas en el mundo y todas las sonrisas que haya habido en la historia del mundo, empezarás a tener una idea de cuánto te quiero","♥ Anoche miré al cielo y empecé a dar a cada estrella una razón por la que te quiero tanto. Me faltaron estrellas","♥ Aunque no sepa quererte de la forma que a ti te gustaría, siempre te querré con toda mi corazón de la mejor forma que sepa","♥ Eres la manera que tiene el mundo de decirme lo bonita que es la vida.","Desearía poder hablarte, desearía poder sonreírte, desearía poder abrazarte, pero sobre todo desearía poder besarte.","Unos ojos que jamás me cansaré de mirar, unos labios que siempre querré besar, pero lo mejor de todo, un corazón que jamás dejaré de amar","Hola mi vida, te amor","https://www.xn--lasimgenesdeamor-jmb.com/wp-content/uploads/2017/04/Imagenes-de-amor-me-encanta-tu-sonrrisa.jpg","https://www.xn--lasimgenesdeamor-jmb.com/wp-content/uploads/2017/04/Imagenes-de-amor-para-enviar-por-messenger.jpg,","https://i.pinimg.com/originals/3b/a5/d6/3ba5d642711ccc63f61c6ece6ce5bc67.png","Hola amor te quiero mucho","https://tenor.com/WeeS.gif","https://tenor.com/bfsWK.gif","https://tenor.com/9kUc.gif","https://tenor.com/bjImU.gif","https://scontent.frex1-1.fna.fbcdn.net/v/t1.6435-9/163722920_930692697691231_5157448569331462252_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=QAfDtu0EVRkAX9rGX8Y&_nc_ht=scontent.frex1-1.fna&oh=13696caf559ec3954b5e61c3d0c64b08&oe=6090FFEE","https://scontent.frex1-1.fna.fbcdn.net/v/t1.6435-9/103056394_734790153948154_4812750337552215222_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=174925&_nc_ohc=r3WZ47xaA4cAX8NyENS&_nc_ht=scontent.frex1-1.fna&oh=a8337bc054581f32a004cc17b330b777&oe=6094508A"]
+
+    aleatorio = random.choice(Publicaciones)
+    print(aleatorio)
+
+    keyboard.write(aleatorio)
+    time.sleep(3)
+    pyautogui.press("enter")
+
+publibot()
+publibot()
+publibot()
+publibot()
+publibot()
+publibot()
+publibot()
+publibot()
+publibot()
